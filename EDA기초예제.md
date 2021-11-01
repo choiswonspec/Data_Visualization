@@ -19,7 +19,7 @@ null 값이 존재한다면 1. 제거하는 방법 complete data analysis 2. 다
 titanic.isnull().sum().plot(kind='bar')
 ```
 
-![스크린샷오후_4_28_56.png](/img/스크린샷오후_4_28_56.png)
+![2_1.png](/img/2_1.png)
 
 
 
@@ -30,7 +30,7 @@ k['ratio'] = k['count'] / titanic.shape[0]
 K
 ```
 
-![스크린샷오후_4_29_35.png](/img/스크린샷오후_4_29_35.png)
+![2_2.png](/img/2_2.png)
 
 
 
@@ -42,7 +42,7 @@ K
 titanic['Survived'].value_counts().plot(kind='bar')
 ```
 
-![스크린샷오후_4_30_09.png](/img/스크린샷오후_4_30_09.png)
+![2_3.png](/img/2_3.png)
 
 ## 명목형 변수들 살펴보기
 
@@ -63,11 +63,11 @@ for col in categorical_columns:
     plt.show()
 ```
 
-![스크린샷오후_4_30_51.png](/img/스크린샷오후_4_30_51.png)
+![2_4.png](/img/2_4.png)
 
-![스크린샷오후_4_31_02.png](/img/스크린샷오후_4_31_02.png)
+![2_5.png](/img/2_5.png)
 
-![스크린샷오후_4_31_13.png](/img/스크린샷오후_4_31_13.png)
+![2_6.png](/img/2_6.png)
 
 ## 이변수 탐색.. 두 변수 간의 관계
 
@@ -77,20 +77,20 @@ for col in categorical_columns:
 2
 ```
 
-![스크린샷오후_4_32_10.png](/img/스크린샷오후_4_32_10.png)
+![2_7.png](/img/2_7.png)
 
 ```python
 tes = titanic.groupby(by=['Sex','Survived'])['Survived'].count().unstack('Survived')
 tes
 ```
 
-![스크린샷오후_4_32_29.png](/img/스크린샷오후_4_32_29.png)
+![2_8.png](/img/2_8.png)
 
 ```python
 tes.plot(kind='bar', legend=True, grid=True, title='Seg')
 ```
 
-![스크린샷오후_4_32_57.png](/img/스크린샷오후_4_32_57.png)
+![2_9.png](/img/2_9.png)
 
 ## 수치형 변수 탐색
 
@@ -111,9 +111,9 @@ for col in numerical_columns:
     plt.show()
 ```
 
-![스크린샷오후_4_33_38.png](/img/스크린샷오후_4_33_38.png)
+![2_10.png](/img/2_10.png)
 
-![스크린샷오후_4_33_50.png](/img/스크린샷오후_4_33_50.png)
+![2_11.png](/img/2_11.png)
 
 ## 다변수 탐색
 
@@ -123,7 +123,7 @@ sns.pairplot(titanic[list(numerical_columns) + ['Survived']], hue='Survived',
 plt.show()
 ```
 
-![스크린샷오후_4_34_30.png](/img/스크린샷오후_4_34_30.png)
+![2_12.png](/img/2_12.png)
 
 # 수치형, 명목형 변수 간의 관계 탐색[¶](http://localhost:8889/lab/tree/Desktop/%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B3/%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B3%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7/%E1%84%89%E1%85%B5%E1%84%80%E1%85%A1%E1%86%A8%E1%84%92%E1%85%AA%20EDA.ipynb#chapter7.-%EC%88%98%EC%B9%98%ED%98%95,-%EB%AA%85%EB%AA%A9%ED%98%95-%EB%B3%80%EC%88%98-%EA%B0%84%EC%9D%98-%EA%B4%80%EA%B3%84-%ED%83%90%EC%83%89)
 
@@ -139,11 +139,11 @@ for col in numerical_feature:
     plt.show()
 ```
 
-![스크린샷오후_4_37_30.png](/img/스크린샷오후_4_37_30.png)
+![2_13.png](/img/2_13.png)
 
-![스크린샷오후_4_37_51.png](/img/스크린샷오후_4_37_51.png)
+![2_14.png](/img/2_14.png)
 
-![스크린샷오후_4_38_05.png](/img/스크린샷오후_4_38_05.png)
+![2_15.png](/img/2_15.png)
 
 # EDA 데이터 분포 확인
 
