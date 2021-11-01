@@ -90,6 +90,7 @@ tes
 tes.plot(kind='bar', legend=True, grid=True, title='Seg')
 ```
 
+
 ![스크린샷 2021-08-25 오후 4.32.57.png](/img/스크린샷 2021-08-25 오후 4.32.57.png)
 
 ## 수치형 변수 탐색
